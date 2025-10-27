@@ -1,0 +1,3 @@
+# Password Vault (Local) — GUI
+A simple local password manager with a Tkinter GUI...
+(complete README from the document above)
