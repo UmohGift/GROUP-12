@@ -1,0 +1,40 @@
+#Python Bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+#Virtual Environment
+venv/
+env/
+ENV/
+
+#Encrypted Password File
+vault.bin
+
+#Build and Distribution Folders
+build/
+dist/
+*.egg-info/
+
+# Test / Cache Files
+.pytest_cache/
+.coverage
+
+# IDE / Editor Config Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+#System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Log Files
+*.log
+
+#Miscellaneous
+*.bak
+*.tmp
