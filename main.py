@@ -32,7 +32,7 @@ class PasswordVaultApp:
 
         self.create_login_ui()
 
-    # ------------------------- UI SETUP ------------------------- #
+    # ------------------------- THE UI SETUP OF TKINTER ------------------------- #
     def create_login_ui(self):
         self.clear_frame()
         tk.Label(self.root, text="🔐 Password Vault", font=("Arial", 18, "bold")).pack(pady=20)
@@ -87,7 +87,7 @@ class PasswordVaultApp:
         for widget in self.root.winfo_children():
             widget.destroy()
 
-    # ------------------------- AUTH / VAULT ------------------------- #
+    # ------------------------- VAULT MESSAGE BOX CODE ------------------------- #
     def login(self):
         master_pwd = self.master_password_var.get()
         if not master_pwd:
@@ -146,12 +146,12 @@ class PasswordVaultApp:
         threading.Thread(target=self.clear_clipboard_after_delay, daemon=True).start()
 
     def clear_clipboard_after_delay(self):
-        time.sleep(12)
+        time.sleep(30)
         pyperclip.copy("")
 
     # ------------------------- ENCRYPTION ------------------------- #
     def derive_key(self, master_password):
-        salt = b'\x9f\x17\x9a\x0b\xc3\xab\xd1\xe4'  # static for simplicity
+        salt = b'\x9f\x17\x9a\x0b\xc3\xab\xd1\xe4' 
         kdf = PBKDF2HMAC(
             algorithm=hashes.SHA256(),
             length=32,
